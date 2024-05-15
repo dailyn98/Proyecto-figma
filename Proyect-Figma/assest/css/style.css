@@ -307,9 +307,11 @@ header#navbar.sticky {
 /*---------------END HERO----------------------------------*/
 
 /*----------------------BEST SELLERS-------------------------*/
-.best_seller{
+.best_seller {
     padding: 40px 0px;
     overflow: hidden;
+    position: relative;
+    margin-bottom: -5em;
 }
 .title_section {
     font-family: var(--font-family-title);
@@ -358,6 +360,11 @@ header#navbar.sticky {
     flex-direction: column;
     align-items: center;
 }
+.card_product:hover {
+    /* -webkit-transform: scale(1.08); */
+    transform: scale(1.08) skewX(350deg);
+    transition: 0.4s ease;
+}
 .card_product .card-body{
     display: flex;
     flex-direction: column;
@@ -386,6 +393,7 @@ header#navbar.sticky {
     object-fit: cover;
     border-radius: 50%;
 }
+
 .img_product span {
     position: absolute;
     width: 55px;
@@ -426,6 +434,9 @@ header#navbar.sticky {
 .products-seller .item{
     padding: 15px 0px;
 }
+.products-seller .owl-stage-outer {
+margin-left: -3em;
+}
 
 .btn_section {
     margin-top: 3em;
@@ -447,42 +458,76 @@ header#navbar.sticky {
     font-style: var(--font-style-italic);
     transform: skewX(-336deg);
 }
+.deco-line-bottom{  
+    left: -9em;
+}
+.deco-line-top {
+    right: -9em;
+}
+.mask-icons-line {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    position: absolute;    
+    transform: rotate(117deg);
+    z-index: -1;
+    flex-direction: column;
+}
+.line {
+    width: 300px;
+    height: 5px;
+}
+.line-purple {
+    background: #FF990059;
+    position: relative;
+    top: 8px;
+    margin-left: -55px;
+}
+.line-yelow {
+    background: #77174A4D;
+}
 /*-------------------END BEST SELLERS-------------------------*/
 
 /*---------------------ABOUT---------------------------------*/
 .about {
     overflow: hidden;
     position: relative;
+    padding-top: 7em;
 }
-.content_about{
-    padding: 40px 0px;
-    /*overflow: hidden;*/
+.content_about {
+    padding: 40px 0px 145px 0px;
+    /* overflow: hidden; */
     background: linear-gradient(82.98deg, #681240 40.89%, #971F5F 77.42%);
-    width: 75%;
+    width: 90%;
     border-radius: 0px 0px 27px 0px;
-    transform: skewX(350deg);
-    margin-left: -4em;
+    transform: skewX(340deg);
+    margin-left: -8em;
 }
 .about .img_about {
     width: 500px;
-    height: 60vh;
+    height: 680px;
     position: absolute;
     transform: skewX(340deg);
     border-radius: 20px;
-    top: -1em;
-    right: -4em;
-    z-index: 2;
+    top: 0em;
+    right: -3em;
+    z-index: 5;
+    overflow: hidden;
 }
 .img_about img {
-    /* transform: skewX(-340deg); */
+    transform: skewX(-340deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 800px;
+    height: 100%;
     object-fit: cover;
-    width: 100%;
-    border-radius: 20px;
+    margin-left: -10em;
 }
 
 .about .cont_about {
-    transform: skewX(-350deg);
-    margin-left: 3em;
+    transform: skewX(-340deg);
+    margin-left: 6em;
 }
 .about .heading-section{
     filter: brightness(0) invert(1);
@@ -495,8 +540,8 @@ header#navbar.sticky {
     text-align: justify;
     font-weight: 600;
 }
-.text_about p{
-    padding: 30px 0px 0px 90px;
+.text_about p {
+    padding: 30px 0px 0px 95px;
     margin: 0;
 }
 .text_about p span{
@@ -504,17 +549,132 @@ header#navbar.sticky {
     font-size: 25px;
 }
 .text_about .btn_about {
-    padding-left: 90px;
+    padding-left: 95px;
 }
-.text_about .btn_section{
+.about .btn_section{
     background: #ffff;
 }
-.text_about .texto_btn{
+.about .texto_btn{
     color: var(--purple-primary-color);
+}
+.benefits {
+    /* width: 54%; */
+    display: flex;
+    justify-content: center;
+    margin-left: 2em;
+    position: relative;
+    z-index: 10;
+    top: -10em;
+    right: -6em;
+}
+.icons_about {
+    transform: skewX(336deg);
+    background: #fff;
+    padding: 25px 45px;
+    border-radius: 15px 30px 15px 30px;
+    display: flex;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.icons_about .icon:nth-child(1), .icons_about .icon:nth-child(2) {
+    margin-right: 70px;
+}
+.icon{
+    display: flex;
+    align-items: center;
+    transform: skewX(-336deg);
+}
+.icon-img {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(180deg, #681240 0%, #971F5F 100%);
+    border-radius: 50px;
+    text-align: center;
+}
+.icon-img img {
+    top: 5px;
+    position: relative;
+    width: 73%;
+    object-fit: cover;
+}
+.icon h3 {
+    font-family: var(--font-family-ubuntu);
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    margin: 0px 0px 0px 20px;
 }
 /*---------------------END ABOUT-----------------------------*/
 
+/*--------------------Shop By Category------------------------*/
 .shop {
     padding: 40px 0px;
     overflow: hidden;
+    position: relative;
 }
+.shop .card_category {
+    width: 260px;
+    height: 350px;
+    border: 1px 0px 0px 0px;
+    box-shadow: -9px 9px #300537;
+    transform: skewX(350deg);
+    border-radius: 30px;
+    overflow: hidden;
+}
+.category .col-md-4 {
+    position: relative;
+    height: 550px;
+}
+.category .col-md-4:nth-child(1) {
+    top: 5em;
+    right: -4em;
+    /* align-items: flex-end; */
+}
+.category .col-md-4:nth-child(2){
+    top: 1em;
+}
+.category .col-md-4:nth-child(3){
+    top: -6em;
+    left: -4em;
+}
+.shop .btn_section{
+    position: absolute;
+    top: -10em;
+    right: 10em;
+}
+.shop .card_category img {
+    width: 312px;
+    height: 100%;
+    object-fit: cover;
+    transform: skewX(10deg);
+    position: relative;
+    left: -26px;
+    -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+.shop .card_category:hover img {
+    /* -webkit-transform: scale(1.08); */
+    transform: scale(1.08) skewX(10deg);
+}
+.shop .categ_product{
+    transform: skewX(350deg);
+    right: 30px;
+    top: 1.5em;
+}
+
+/*-----------------End Shop By Category------------------------*/
+
+/*-----------------------Testimonials--------------------------*/
+.testimonial {
+    background: #971F5F17;
+    overflow: hidden;
+}
+.testimonial .btn_section {
+    background: var(--purple-primary-color);
+    color: #ffff;
+}
+.testimonial .text_about p {
+        color: #0000008A;
+        padding: 30px 0px 0px 157px;
+    }
+/*--------------------End  Testimonials--------------------------*/
