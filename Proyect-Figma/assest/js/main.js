@@ -10,12 +10,12 @@ window.addEventListener("scroll", function() {
   $('.products-seller').owlCarousel({
     loop:true,
     nav:false,
-    autoplayTimeout: 4000,
+    autoplayTimeout: 5000,
     smartSpeed: 400,
     //center: true,
     autoplay:true,
     //autoplayTimeout:1000,
-    //autoplayHoverPause:true,   
+    autoplayHoverPause:true,   
     //nav: false,
     //rewind: false,    
     
